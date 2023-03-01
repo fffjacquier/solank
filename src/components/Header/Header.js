@@ -12,7 +12,7 @@ const Header = () => {
     <header>
       <SuperHeader />
       <MainHeader>
-        <Logo />
+        <LogoAbsolute />
         <Nav>
           <NavLink href="/sale">Sale</NavLink>
           <NavLink href="/new">New&nbsp;Releases</NavLink>
@@ -29,9 +29,25 @@ const Header = () => {
 const MainHeader = styled.div`
   padding: 0 32px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 68px;
 `;
 
-const Nav = styled.nav``;
+const LogoAbsolute = styled(Logo)`
+  position: absolute;
+  left: 32px;
+  top: calc(48px + 14px);
+`;
+
+const Nav = styled.nav`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  height: 68px;
+`;
 
 const NavLink = styled.a`
   font-size: 1.125rem;
